@@ -1,8 +1,9 @@
 require.config({
 	paths: {
+		"backbone": "vendor/backbone/backbone",
 		"jquery": "vendor/jquery/jquery",
-		"underscore": "vendor/underscore/underscore",
-		"backbone": "vendor/backbone/backbone"
+		"json2": "vendor/json2/json2",
+		"underscore": "vendor/underscore/underscore"
 	},
 	shim: {
 		"backbone": {
@@ -10,11 +11,15 @@ require.config({
 			// These script dependencies should be loaded before loading backbone.js.
 			deps: [
 				"underscore",
-				"jquery"
+				"jquery",
+				"json2"
 			],
 
 			// Once loaded, use the global `Backbone` as the module value.
 			exports: "Backbone"
+		},
+		"json2": {
+			exports: "JSON"
 		},
 		"underscore": {
 			exports: "_"

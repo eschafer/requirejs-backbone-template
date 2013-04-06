@@ -4,8 +4,9 @@
 	"dependencies": {
 		"modernizr": "http://modernizr.com/downloads/modernizr-latest.js",
 		"requirejs": "latest",
-		"jquery": "latest",
 		"backbone": "latest",
-		"underscore": "latest"
+		"underscore": "latest",
+		"jquery": "latest",
+		"json2": "latest"
 	}
 }
