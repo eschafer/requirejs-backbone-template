@@ -5,10 +5,27 @@
 
 		// Project configuration.
 		grunt.initConfig({
+			clean: {
+				init: [
+					"app/vendor/jquery/!(jquery.js)",
+					"app/vendor/modernizr/!(modernizr.js)",
+					"app/vendor/requirejs/!(require.js)",
+				],
+			},
+
+			copy: {
+				init: {
+					files: [
+						{
+							"app/vendor/modernizr/modernizr.js": "app/vendor/modernizr/index.js"
+						}
+					]
+				}
+			},
+
 			jshint: {
 				files: [
-					"app/scripts/**/*.js",
-					"!app/vendor/**/*.js"
+					"app/scripts/**/*.js"
 				],
 				options: {
 
@@ -61,12 +78,24 @@
 			}
 		});
 
+		grunt.loadNpmTasks("grunt-contrib-clean");
+		grunt.loadNpmTasks("grunt-contrib-copy");
 		grunt.loadNpmTasks("grunt-contrib-jshint");
 		grunt.loadNpmTasks("grunt-contrib-requirejs");
 
 		// Default task(s).
 		grunt.registerTask("default", [
 			"jshint"
+		]);
+
+		grunt.registerTask("init", [
+			"copy",
+			"clean"
+		]);
+
+		grunt.registerTask("build", [
+			"jshint",
+			"requirejs"
 		]);
 	};
 }());
