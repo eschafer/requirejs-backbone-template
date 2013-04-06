@@ -1,9 +1,13 @@
-define(["backbone"], function(Backbone) {
-	var App = Backbone.View.extend({
-		initialize: function() {
-			console.log("Woot!");
-		}
-	});
+(function() {
+	"use strict";
 
-	return App;
-});
+	define(["backbone"], function(Backbone) {
+		var App = Backbone.View.extend({
+			initialize: function() {
+				console.log("Woot!");
+			}
+		});
+
+		return App;
+	});
+}());
