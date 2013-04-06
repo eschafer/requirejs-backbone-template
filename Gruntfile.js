@@ -6,7 +6,10 @@
 		// Project configuration.
 		grunt.initConfig({
 			jshint: {
-				files: "app/scripts/**/*.js",
+				files: [
+					"app/scripts/**/*.js",
+					"!app/vendor/**/*.js"
+				],
 				options: {
 
 					// Enforcing options.

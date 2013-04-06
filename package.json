@@ -1,7 +1,11 @@
 {
 	"name": "requirejs-backbone-template",
 	"version": "0.1.0",
+	"scripts": {
+		"preinstall": "sudo npm install -g bower"
+	},
 	"devDependencies": {
+		"requirejs": "~2.1.5",
 		"grunt": "~0.4.1",
 		"grunt-contrib-jshint": "~0.4.0"
 	}
