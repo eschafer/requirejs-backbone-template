@@ -45,10 +45,24 @@
 						define: true
 					}
 				}
+			},
+
+			requirejs: {
+				compile: {
+					options: {
+						appDir: "app",
+						baseUrl: "scripts",
+						dir: "dist",
+						name: "main",
+						mainConfigFile: "app/scripts/main.js",
+						optimizeCss: "standard"
+					}
+				}
 			}
 		});
 
 		grunt.loadNpmTasks("grunt-contrib-jshint");
+		grunt.loadNpmTasks("grunt-contrib-requirejs");
 
 		// Default task(s).
 		grunt.registerTask("default", [
