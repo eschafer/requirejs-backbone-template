@@ -1,5 +1,5 @@
 {
-	"name": "RequireJS Backbone Template",
+	"name": "requirejs-backbone-template",
 	"version": "0.1.0",
 	"dependencies": {
 		"modernizr": "http://modernizr.com/downloads/modernizr-latest.js",
