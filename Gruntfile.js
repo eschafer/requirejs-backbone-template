@@ -69,14 +69,17 @@
 			},
 
 			requirejs: {
-				compile: {
+				build: {
 					options: {
 						appDir: "app",
 						baseUrl: "scripts",
 						dir: "dist",
 						name: "main",
 						mainConfigFile: "app/scripts/main.js",
-						optimizeCss: "standard"
+						optimize: "uglify2",
+						optimizeCss: "standard",
+						generateSourceMaps: true,
+						preserveLicenseComments: false
 					}
 				}
 			}
