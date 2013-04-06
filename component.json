@@ -3,10 +3,10 @@
 	"version": "0.1.0",
 	"dependencies": {
 		"modernizr": "http://modernizr.com/downloads/modernizr-latest.js",
-		"requirejs": "latest",
-		"backbone": "latest",
-		"underscore": "latest",
-		"jquery": "latest",
+		"requirejs": "~2.1.5",
+		"backbone": "~1.0.0",
+		"underscore": "~1.4.4",
+		"jquery": "~1.9.1",
 		"json2": "latest"
 	}
 }
