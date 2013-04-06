@@ -8,3 +8,7 @@
 
 - `npm install`
 - `bower install`
+
+## Build for production
+
+- `grunt requirejs`
