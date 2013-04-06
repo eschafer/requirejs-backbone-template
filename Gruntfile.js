@@ -7,9 +7,13 @@
 		grunt.initConfig({
 			clean: {
 				init: [
+					"app/vendor/backbone/!(backbone.js)",
 					"app/vendor/jquery/!(jquery.js)",
+					"app/vendor/json2/!(json2.js)",
 					"app/vendor/modernizr/!(modernizr.js)",
 					"app/vendor/requirejs/!(require.js)",
+					"app/vendor/underscore/!(underscore.js)",
+					"app/vendor/**/.*"
 				],
 			},
 
