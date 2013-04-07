@@ -31,6 +31,7 @@
 
 			jshint: {
 				files: [
+					"Gruntfile.js",
 					"app/scripts/**/*.js"
 				],
 				options: {
@@ -64,6 +65,7 @@
 					devel: true,
 
 					globals: {
+						module: true,
 						require: true,
 						define: true
 					}
