@@ -11,16 +11,18 @@
 					"app/vendor/jquery/!(jquery.js)",
 					"app/vendor/json2/!(json2.js)",
 					"app/vendor/modernizr/!(modernizr.js)",
+					"app/vendor/normalize-css/!(normalize.css)",
 					"app/vendor/requirejs/!(require.js)",
 					"app/vendor/underscore/!(underscore.js)",
 					"app/vendor/**/.*"
-				],
+				]
 			},
 
 			copy: {
 				init: {
 					files: [
 						{
+							"app/styles/main.css": "app/vendor/h5bp/css/main.css",
 							"app/vendor/modernizr/modernizr.js": "app/vendor/modernizr/index.js"
 						}
 					]
@@ -95,10 +97,27 @@
 			"jshint"
 		]);
 
-		grunt.registerTask("init", [
-			"copy",
-			"clean"
-		]);
+		grunt.registerTask("init", function() {
+
+			// h5bp ~4.1.0 is okay.  Otherwise, throw a warning.
+			var h5bp = grunt.file.readJSON("app/vendor/h5bp/component.json");
+			var version = {
+				major: parseInt(h5bp.version.split(".")[0], 10),
+				minor: parseInt(h5bp.version.split(".")[1], 10),
+				patch: parseInt(h5bp.version.split(".")[2], 10)
+			};
+
+			if (version.major === 4 && version.minor === 1 && version.patch >= 0) {
+				grunt.log.writeln("h5bp version is ~4.1.0");
+			} else {
+				grunt.fail.warn("h5bp version is not ~4.1.0");
+			}
+
+			grunt.task.run([
+				"copy",
+				"clean"
+			]);
+		});
 
 		grunt.registerTask("build", [
 			"jshint",
