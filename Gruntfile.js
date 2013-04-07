@@ -8,6 +8,15 @@
 			clean: {
 				init: [
 					"app/vendor/backbone/!(backbone.js)",
+
+					// This is clunky...
+					"app/vendor/h5bp/*.!(json)",
+					"app/vendor/h5bp/doc",
+					"app/vendor/h5bp/img",
+					"app/vendor/h5bp/css/!(main.css)",
+					"app/vendor/h5bp/js/vendor/!(modernizr-2.6.2.min.js)",
+					"app/vendor/h5bp/js/main.js",
+
 					"app/vendor/jquery/!(jquery.js)",
 					"app/vendor/json2/!(json2.js)",
 					"app/vendor/modernizr/!(modernizr.js)",
@@ -15,6 +24,14 @@
 					"app/vendor/requirejs/!(require.js)",
 					"app/vendor/underscore/!(underscore.js)",
 					"app/vendor/**/.*"
+				],
+				build: [
+					"dist/**/.*",
+					"dist/scripts/collections",
+					"dist/scripts/models",
+					"dist/vendor/h5bp/component.json",
+					"dist/vendor/h5bp/css",
+					"dist/vendor/h5bp/js/vendor"
 				]
 			},
 
@@ -124,7 +141,8 @@
 
 		grunt.registerTask("build", [
 			"jshint",
-			"requirejs"
+			"requirejs",
+			"clean:build"
 		]);
 	};
 }());
