@@ -23,7 +23,7 @@
 					files: [
 						{
 							"app/styles/main.css": "app/vendor/h5bp/css/main.css",
-							"app/vendor/modernizr/modernizr.js": "app/vendor/modernizr/index.js"
+							"app/vendor/modernizr/modernizr.js": "app/vendor/h5bp/js/vendor/modernizr-2.6.2.min.js"
 						}
 					]
 				}
@@ -67,7 +67,8 @@
 					globals: {
 						module: true,
 						require: true,
-						define: true
+						define: true,
+						Modernizr: true
 					}
 				}
 			},

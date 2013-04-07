@@ -6,7 +6,6 @@
 		"h5bp": "https://github.com/h5bp/html5-boilerplate.git",
 		"jquery": "~1.9.1",
 		"json2": "https://github.com/douglascrockford/JSON-js.git",
-		"modernizr": "http://modernizr.com/downloads/modernizr-latest.js",
 		"normalize-css": "~1.1.0",
 		"requirejs": "~2.1.5",
 		"underscore": "~1.4.4"
